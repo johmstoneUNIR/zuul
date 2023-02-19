@@ -5,13 +5,14 @@ spring:
     name: zuul-server
 eureka:
   instance:
-    preferIpAddress: true
-    hostname: ${EUREKA_HOST:af7ff8ec-2c52-4c39-8a0f-fb69d83b0b27.prvt.dyno.rt.heroku.com}
+    appname: zuul-server
+    metadataMap:
+      instanceId: ${spring.application.name}:${spring.application.instance_id:${server.port}:${random.value}}
   client:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      defaultZone: ${EUREKA_URL:https://eurekaunir.herokuapp.com/eureka}
+      defaultZone: ${EUREKA_URL:http://localhost:8761/eureka}
       
       
 management:
