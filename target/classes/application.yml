@@ -6,12 +6,12 @@ spring:
 eureka:
   instance:
     preferIpAddress: true
-    hostname: ${EUREKA_HOST:https://eurekaunir.herokuapp.com}
+    hostname: ${EUREKA_HOST:https://172.18.124.178}
   client:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      defaultZone: ${EUREKA_URL:https://eurekaunir.herokuapp.com:8761/eureka}
+      defaultZone: ${EUREKA_URL:https://eurekaunir.herokuapp.com/eureka}
       
       
 management:
