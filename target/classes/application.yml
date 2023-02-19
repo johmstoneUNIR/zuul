@@ -6,7 +6,7 @@ spring:
 eureka:
   instance:
     preferIpAddress: true
-    hostname: ${EUREKA_HOST:https://172.18.124.178}
+    hostname: ${EUREKA_HOST:af7ff8ec-2c52-4c39-8a0f-fb69d83b0b27.prvt.dyno.rt.heroku.com}
   client:
     registerWithEureka: true
     fetchRegistry: true
